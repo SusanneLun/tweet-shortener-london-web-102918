@@ -23,4 +23,22 @@ def word_substituter(tweets)
   end 
   return subtweets.to_s 
 end
+
+def word_substituter(tweet)
+  substitutes = {	  substitutes = {
+@@ -14,19 +14,12 @@ def word_substituter(tweet)
+  "and" => "&"	  "and" => "&"
+}	}
+  output_array = [] # creating an empty array in which to dumb the output	  output_array = [] # creating an empty array in which to dumb the output
+  # assume tweet is a regular sentence	  # assumes tweet is a regular sentence
+  output_tweet = tweet.split(" ") # returns an array	  # split returns an array, then we iterate over the array
+  output_array = output_tweet.collect do |word| # iterate over the array	  # this is ideal for a ternary 
+    if substitutes.keys.include?(word) 	  output_array = (tweet.split(" ").collect {|word| substitutes.keys.include?(word) ? substitutes[word] : word }).join(" ")
+      word = substitutes[word]	
+    else	
+      word	
+    end	
+  end	
+  output_array.join(" ") # convert it back from array into string	
+end	end
  
