@@ -16,10 +16,11 @@ end
 
 def word_substituter(tweets)
   tweets = []
+  subtweets = []
   tweets.each do |key, value| 
     if key == dictionary[key] do subtweets << value
-      
-     return subtweets.to_s 
+   end
   end 
+  return subtweets.to_s 
 end
  
