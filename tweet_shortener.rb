@@ -54,4 +54,7 @@ end
     tweets
   end
 end
+
+def shortened_tweet_truncator(tweets)
+  
  
