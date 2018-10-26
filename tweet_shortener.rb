@@ -21,4 +21,5 @@ def word_substituter(tweets)
       
      return subtweets.to_s 
   end 
+end
  
