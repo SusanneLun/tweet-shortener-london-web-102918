@@ -25,10 +25,6 @@ def word_substituter(tweets)
 end
 
 def word_substituter(tweet)
-  substitutes = {	  substitutes = {
-@@ -14,19 +14,12 @@ def word_substituter(tweet)
-  "and" => "&"	  "and" => "&"
-}	}
   output_array = [] # creating an empty array in which to dumb the output	  output_array = [] # creating an empty array in which to dumb the output
   # assume tweet is a regular sentence	  # assumes tweet is a regular sentence
   output_tweet = tweet.split(" ") # returns an array	  # split returns an array, then we iterate over the array
